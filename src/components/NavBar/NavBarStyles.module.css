@@ -73,6 +73,10 @@
         margin-right: 0;
     }
 
+    .webshop-box{
+        padding: .35rem .6rem;
+    }
+
     .nav img {
         width: 30px;
         height: 30px;

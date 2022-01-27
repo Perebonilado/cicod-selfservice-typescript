@@ -1,5 +1,6 @@
 import NavBarStyles from './NavBarStyles.module.css'
 
+
 interface Props {
     businessName: string,
     logoUrl?: string
@@ -13,7 +14,7 @@ const NavBar: React.FC<Props> = ({logoUrl, businessName}) => {
             </div>
 
             <p className={`${NavBarStyles['business-name']}`}>{businessName}</p>
-
+            
             <div className={`${NavBarStyles['webshop-box']}`}>
             <i className="fas fa-store"></i>
             <p>Web shop</p>

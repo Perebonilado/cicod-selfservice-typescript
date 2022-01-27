@@ -3,6 +3,10 @@
     border: 1px solid #DDE2E5;
 }
 
+.inputBox:focus {
+    outline: none;
+}
+
 .inputBox::placeholder{
     font-size: 14.5px;
 }
