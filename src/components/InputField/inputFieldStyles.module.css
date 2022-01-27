@@ -1,0 +1,22 @@
+.inputBox{
+    padding: 1rem 3rem;
+    border: 1px solid #DDE2E5;
+}
+
+.inputBox::placeholder{
+    font-size: 14.5px;
+}
+
+@media only screen and (max-width: 320px) {
+
+    .inputBox{
+        padding: .6rem 1rem;
+        border: 1px solid #DDE2E5;
+    }
+
+    .inputBox::placeholder{
+        font-size: 12px;
+    }
+    
+
+}

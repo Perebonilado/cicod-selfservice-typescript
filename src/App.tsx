@@ -1,11 +1,14 @@
 import React from 'react';
+import { AppWrapper } from './context/state'
+import HomeScreen from './screens/HomeScreen';
+
 
 
 function App() {
   return (
-    <div className="App">
-      <h1>Self Service Cicod</h1>
-    </div>
+    <AppWrapper className="App">
+      <HomeScreen />
+    </AppWrapper>
   );
 }
 

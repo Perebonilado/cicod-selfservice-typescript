@@ -1,0 +1,138 @@
+/* footer section */
+
+.m-y1 {
+    margin-bottom: 1rem;
+}
+
+.bold-text {font-weight: bold;}
+
+footer {
+    background-color: #000;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 2rem 87px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer>p{
+    display: none;
+}
+
+
+.footer-bx-2, .footer-bx-3{
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-bx-3{
+    height: 70px;
+    justify-content: space-between;
+}
+
+.footer>div:last-child{
+    display: none !important;
+}
+
+.sub-bx{
+    justify-self: center;
+}
+
+.footer-bx-2{
+    position: relative;
+    display: flex;
+}
+
+.circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.rect-bx{
+    height: 8px;
+    border-radius: .5rem;
+    background-color: #495057;
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.footer-bx-2 .rect-bx{
+    width: 150px;
+}
+
+
+.footer-bx-3 .sub-bx{
+    position: relative;
+}
+
+.footer-bx-3 .sub-bx .rect-bx{
+    width: 100px;
+}
+
+@media only screen and (max-width: 760px) {
+
+    /* footer */
+    footer {
+        flex-direction: column;
+        padding: 1rem;
+        padding-top: 2rem;
+        height: fit-content;
+        align-items: flex-start;
+    }
+
+    footer>div{
+        margin-bottom: 1rem;
+    }
+
+
+    footer>div:first-child>p:last-child, footer>div:first-child>p:nth-child(2){
+        display: none;
+    }
+
+   
+    footer>p:first-child{
+        display: block;
+    }
+
+    .item1 {grid-area: one;}
+    .item2 {grid-area: two;}
+    .item3 {grid-area: three;}
+    .item4 {grid-area: four;}
+
+    footer{
+        padding: 1rem ;
+        display: grid;
+        grid-template-areas:
+                            'four' 
+                            'two'
+                            'three'
+                            'one';
+        grid-gap: 1rem;
+    }
+
+    footer>div:nth-child(2)>p:first-child{
+        display: none;
+    }
+
+    .status-history-bx {
+       padding-left: .5rem;
+       padding-right: .5rem;
+    }
+
+
+}
+
+@media only screen and (max-width: 320px) {
+    
+    footer{
+        font-size: 14px;
+    }
+
+}
