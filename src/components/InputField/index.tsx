@@ -3,11 +3,12 @@ import inputFieldStyles from './inputFieldStyles.module.css'
 
 interface Props {
     inputVal: string | number,
-    setInputVal: React.Dispatch<React.SetStateAction<string>>
+    setInputVal: React.Dispatch<React.SetStateAction<string>>,
 }
 
 
 const InputField: React.FC<Props> = ({ inputVal, setInputVal }:Props) => {
+    
 
     return (
     <input

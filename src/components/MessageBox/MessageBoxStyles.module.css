@@ -1,0 +1,55 @@
+.container {
+    background-color: #fff;
+    padding: .5rem;
+    margin-bottom: .5rem
+}
+
+.container>p {
+    padding: .5rem 0;
+}
+
+.titleBox {
+    display: flex;
+    align-items: center;
+    color: #76808B;
+}
+
+.titleBox p:first-child{
+    font-weight: bold;
+}
+
+.circle {
+    background-color: #76808B;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    margin: 0 .3rem;
+}
+
+.attachment_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.attachment_box p{
+    padding: .3rem 0;
+}
+
+.attachment_box p:first-child{
+    font-weight: bold;
+}
+
+.attachment_box p:last-child{
+    color: #007BFF;
+}
+
+.replyBox{
+    padding-left: 1.5rem;
+}
+
+.replyBox>div{
+    align-self: flex-end;
+    border-left: 4px solid limegreen;
+}

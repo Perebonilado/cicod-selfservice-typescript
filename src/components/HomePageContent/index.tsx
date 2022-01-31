@@ -21,7 +21,7 @@ const HomePageContent:React.FC = () => {
             
             <form className={`${HomePageContentStyles['form']}`} action="" onSubmit={(e)=>handleSubmit(e)}>
                <InputField inputVal={inputVal} setInputVal={setInputVal} /> 
-               <Button />
+               <Button buttonType='outline'/>
             </form>
 
         </section>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { AppWrapper } from './context/state'
 import HomeScreen from './screens/HomeScreen';
+import TicketDetails from './screens/TicketDetails';
 
 
 
@@ -8,7 +9,7 @@ import HomeScreen from './screens/HomeScreen';
 function App() {
   return (
     <AppWrapper className="App">
-      <HomeScreen />
+      <TicketDetails />
     </AppWrapper>
   );
 }

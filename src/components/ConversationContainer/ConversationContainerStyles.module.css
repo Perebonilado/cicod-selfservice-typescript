@@ -1,0 +1,103 @@
+.container {
+    padding: 1.3rem 10rem;
+    border-top: 1px solid #0000001F;
+}
+
+.headingBox{
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.headingBox p:last-child{
+    font-weight: bold;
+}
+
+.currentStatusBox {
+    background-color: #EEF0F2;
+    padding: 1rem;
+    border-radius: .7rem;
+}
+
+.currentStatusBox h3 {
+    color: #76808B;
+    padding-bottom: 1rem;
+}
+
+.status {
+    grid-area: item1;
+}
+.date_time {grid-area: item2;}
+.comment {grid-area: item3;}
+
+.sub_box {
+    display: grid;
+    grid-template-areas: 'item1 item2'
+                         'item3 item3';
+}
+
+.sub_box p:first-child{
+    padding-bottom: .5rem;
+    font-weight: bold;
+}
+
+.comment{
+    padding-top: 2.5rem;
+}
+
+.reply_box {
+    color: #007BFF;
+    width: fit-content;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.reply_box img{
+    margin-right: .3rem;
+}
+
+
+@media only screen and (max-width: 950px) {
+    .headingBox{
+        flex-direction: column;
+    }
+
+    .headingBox p {
+        padding: .3rem 0;
+        justify-content: flex-start;
+    }
+}
+
+
+@media only screen and (max-width: 1106px) {
+    .container{
+        padding: 1.3rem 5rem;
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+
+    .container {
+        padding: 1.3rem 2rem;
+    }
+
+    .sub_box {
+        grid-template-areas: 'item1'
+                             'item2'
+                             'item3';
+    }
+
+    .comment{
+        padding-top: 0;
+    }
+
+    .sub_box>div{
+        padding-bottom: 2rem;
+    }
+}
+
+
+
+
