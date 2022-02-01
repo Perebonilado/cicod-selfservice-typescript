@@ -2,6 +2,7 @@ import MessagesContainerStyles from './MessagesContainerStyles.module.css'
 import MessageBox from '../MessageBox'
 
 type MessageTemplate = {
+    id: number,
     name?: string,
     date: string,
     time: string,
@@ -13,6 +14,7 @@ type MessageTemplate = {
 
 const Messages:MessageTemplate = [
     {
+    id: 1,
     name: 'James Oluwaseun', 
     date: 'Thursday Jul 16, 2021', 
     time: '14:04:15',
@@ -23,6 +25,7 @@ const Messages:MessageTemplate = [
     },
 
     { 
+    id: 2,
     date: 'Thursday Jul 16, 2021', 
     time: '14:04:15',
     isReply: false,
@@ -39,10 +42,11 @@ const MessagesContainer = () => {
         <div className={`${MessagesContainerStyles['container']}`}>
             {Messages.map((respondent)=>{
                 
-                const {name, date, time, message, documentName, isAttach, isReply } = respondent
+                const {name, date, time, message, documentName, isAttach, isReply, id } = respondent
 
                 return (
-                    <MessageBox 
+                    <MessageBox
+                    key={id} 
                     name={name} 
                     message={message} 
                     date={date} 

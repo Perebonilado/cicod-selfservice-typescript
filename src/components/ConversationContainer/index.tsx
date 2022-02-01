@@ -4,6 +4,7 @@ import CommentBox from '../CommentsBox'
 import DateTime from '../DateTime'
 import Button from '../Button'
 import MessagesContainer from '../MessagesContainer'
+import MessageTextField from '../MessageTextField'
 
 const ConversationContainer:React.FC = () => {
     return (
@@ -51,7 +52,7 @@ const ConversationContainer:React.FC = () => {
             <div className={`${ConversationContainerStyles['reply_box']}`}><img src="" alt="" /><Button buttonType='link'>Reply</Button></div>
 
             <MessagesContainer />
-
+            <MessageTextField />
             </div>
 
 

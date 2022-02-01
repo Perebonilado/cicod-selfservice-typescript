@@ -20,7 +20,7 @@ const MessageBox:React.FC<Props> = ({
     message
 }) => {
     return (
-        <div className={`${isReply && MessageBoxStyles['replyBox']}`}> 
+        <div className={`${isReply && MessageBoxStyles['replyBox']} ${MessageBoxStyles['message_box']}`}> 
         <div className={
             `${MessageBoxStyles['container']}`}
             >

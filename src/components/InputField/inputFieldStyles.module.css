@@ -1,6 +1,7 @@
 .inputBox{
     padding: 1rem 3rem;
     border: 1px solid #DDE2E5;
+    margin-right: 1rem;
 }
 
 .inputBox:focus {
@@ -9,6 +10,15 @@
 
 .inputBox::placeholder{
     font-size: 14.5px;
+}
+
+@media only screen and (max-width: 760px) {
+
+    .inputBox{
+        margin-right: 0;
+        margin-bottom: 1.2rem;
+    }
+
 }
 
 @media only screen and (max-width: 320px) {

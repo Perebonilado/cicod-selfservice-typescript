@@ -16,7 +16,7 @@
 
 .currentStatusBox {
     background-color: #EEF0F2;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: .7rem;
 }
 
@@ -70,7 +70,7 @@
 }
 
 
-@media only screen and (max-width: 1106px) {
+@media only screen and (max-width: 1200px) {
     .container{
         padding: 1.3rem 5rem;
     }

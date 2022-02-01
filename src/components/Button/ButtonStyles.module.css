@@ -32,7 +32,7 @@
     /* padding: .8rem 1.7rem; */
     font-size: 14px;
     border-radius: .2rem;
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
     cursor: pointer;
 }
 
@@ -40,7 +40,7 @@
 
     .button{
         margin-left: 0;
-        margin: 1.5rem 0;
+        /* margin: 1.5rem 0; */
         font-size: 16px;
     }
 
