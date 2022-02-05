@@ -23,16 +23,10 @@
 
 
 .button {
-    /* color: #fff; */
-    /* background-color:#6F3FB1; */
-    /* color: #fff; */
-    /* border: 1px solid transparent; */
     text-decoration: none;
     text-align: center;
-    /* padding: .8rem 1.7rem; */
     font-size: 14px;
     border-radius: .2rem;
-    /* margin-left: 1rem; */
     cursor: pointer;
 }
 
@@ -40,10 +34,15 @@
 
     .button{
         margin-left: 0;
-        /* margin: 1.5rem 0; */
         font-size: 16px;
     }
 
+}
+
+@media only screen and (max-width: 580px) {
+    .solid{
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 320px) {

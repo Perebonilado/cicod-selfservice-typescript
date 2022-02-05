@@ -23,7 +23,7 @@ const IdHeading: React.FC<Props> = ({id}) => {
             ORDER ID: {id}
             </h2>
 
-            <form action="" onSubmit={(e)=>handleSubmit(e)}>
+            <form action="" onSubmit={handleSubmit}>
             <label>Ticket/order ID</label>
             <InputField inputVal={inputVal} setInputVal={setInputVal} />
             <Button />

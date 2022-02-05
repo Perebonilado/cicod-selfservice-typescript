@@ -2,8 +2,8 @@ import MessageBoxStyles from './MessageBoxStyles.module.css'
 
 interface Props {
     name?: string,
-    date: string,
-    time: string,
+    date?: string,
+    time?: string,
     isReply?:boolean,
     isAttach?: boolean,
     documentName?: string,

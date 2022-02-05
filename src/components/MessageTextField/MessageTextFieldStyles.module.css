@@ -13,15 +13,21 @@
     align-self: center;
 }
 
-.buttons_container button {
+
+.buttons_container .attach_button {
     margin: 0 1rem;
-    padding: 1rem 1.5rem;
+    padding: .8rem 1.3rem;
     border-radius: .3rem;
     background-color: #F0F3F5;
     border: none;
     outline: none;
     font-size: 15px;
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: #000;
 }
 
 .form textarea{
@@ -31,12 +37,54 @@
     outline: none;
     padding: 0 1rem;
     font-size: 16px;
+    text-align: justify;
 }
 
 .form div:first-child{
     display: flex;
     justify-content: space-between;
     padding: .5rem 1rem;
+}
+
+.form div:first-child p:last-child{
+    text-decoration: underline;
+}
+
+.form div:last-child{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.form div:last-child .attach_button,
+.form div:last-child .file_name_box,
+.button_component{
+    flex: 1;
+}
+
+.form div:last-child .file_name_box{
+    width: 100%;
+    overflow-wrap: break-word;
+    padding: .4rem 0;
+}
+
+.file_name_box img{
+    margin-bottom: -.25rem;
+    margin-left: .3rem;
+    cursor: pointer;
+}
+
+.button_component{
+    padding: 0!important;
+    width: 5rem;
+    min-width: 5.5rem;
+    max-width: 5.5rem;
+}
+
+.form>div:last-child .attach_button {
+    width: 10rem;
+    min-width: 10rem;
+    max-width: 10rem;
 }
 
 .form>div:first-child p:first-child{
@@ -46,5 +94,29 @@
 .form>div:first-child p:last-child{
     color: #76808B;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 580px) {
+    
+    .form>div:last-child{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form>div:last-child .attach_button {
+        width: 100%;
+        margin: 1rem 0;
+    }
+    .button_component{
+        width: 100%;
+        min-width: none;
+        max-width: none;
+    }
+    .form>div:last-child .attach_button{
+        width: 100%;
+        min-width: none;
+        max-width: none;
+    }
+
 }
 

@@ -5,8 +5,12 @@ import DateTime from '../DateTime'
 import Button from '../Button'
 import MessagesContainer from '../MessagesContainer'
 import MessageTextField from '../MessageTextField'
+import { useState } from 'react'
 
 const ConversationContainer:React.FC = () => {
+    
+    const [isTextField, setIsTextField] = useState<boolean>(false)
+
     return (
         <section className={`${ConversationContainerStyles['container']}`}>
             <div className={`${ConversationContainerStyles['headingBox']}`}>
@@ -49,10 +53,10 @@ const ConversationContainer:React.FC = () => {
                 </div>
 
 
-            <div className={`${ConversationContainerStyles['reply_box']}`}><img src="" alt="" /><Button buttonType='link'>Reply</Button></div>
+            {!isTextField && <div className={`${ConversationContainerStyles['reply_box']}`}><img src="" alt="" /><Button buttonType='link' setIsTextField={setIsTextField} isTextField={isTextField}>Reply</Button></div>}
 
             <MessagesContainer />
-            <MessageTextField />
+            {isTextField && <MessageTextField isTextField={isTextField} setIsTextField={setIsTextField} />}
             </div>
 
 

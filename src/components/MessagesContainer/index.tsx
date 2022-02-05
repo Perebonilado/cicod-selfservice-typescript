@@ -1,48 +1,22 @@
 import MessagesContainerStyles from './MessagesContainerStyles.module.css'
 import MessageBox from '../MessageBox'
+import useFetch from '../../useFetch'
+import {MessageTemplate} from '../../MessageTemplate'
+import { AppContext, AppContent } from '../../AppContext'
+import * as React from 'react'
 
-type MessageTemplate = {
-    id: number,
-    name?: string,
-    date: string,
-    time: string,
-    isReply?:boolean,
-    isAttach?: boolean,
-    documentName?: string,
-    message: string
-}[]
-
-const Messages:MessageTemplate = [
-    {
-    id: 1,
-    name: 'James Oluwaseun', 
-    date: 'Thursday Jul 16, 2021', 
-    time: '14:04:15',
-    isReply: true,
-    isAttach: true,
-    documentName: 'Document 1',
-    message: 'Lorem ipsum dummy text of the printing and typesetting industry. Lorem ipsum has the industry'
-    },
-
-    { 
-    id: 2,
-    date: 'Thursday Jul 16, 2021', 
-    time: '14:04:15',
-    isReply: false,
-    isAttach: false,
-    message: 'Lorem ipsum dummy text of the printing and typesetting industry. Lorem ipsum has the industry'
-    }
-
-
-]
 
 
 const MessagesContainer = () => {
+    
+    const {Messages} = React.useContext(AppContext) as AppContent
+
     return (
         <div className={`${MessagesContainerStyles['container']}`}>
-            {Messages.map((respondent)=>{
+            
+    { Messages && Messages.map((response)=>{
                 
-                const {name, date, time, message, documentName, isAttach, isReply, id } = respondent
+               const {name, date, time, message, documentName, isAttach, isReply, id } = response
 
                 return (
                     <MessageBox

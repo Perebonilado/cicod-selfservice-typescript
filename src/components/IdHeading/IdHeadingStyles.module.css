@@ -39,10 +39,10 @@
 
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 580px) {
 
     .container {
-        padding: 1.3rem 2rem;
+        padding: 1.3rem .5rem;
     }
 
     .container h2 {

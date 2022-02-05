@@ -1,11 +1,13 @@
 .message_box {
     width: fit-content;
+    text-align: justify;
 }
 
 .container {
     background-color: #fff;
     padding: .5rem;
-    margin-bottom: .5rem
+    margin-bottom: .5rem;
+    margin-top: .7rem;
 }
 
 .container>p {
@@ -51,10 +53,25 @@
 }
 
 .replyBox{
-    padding-left: 1.5rem;
+    padding-left: 1rem;
 }
 
 .replyBox>div{
     align-self: flex-end;
     border-left: 4px solid limegreen;
+}
+
+@media only screen and (max-width: 760px) {
+    .titleBox{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .circle{
+        display: none;
+    }
+
+    .titleBox p:first-child{
+        margin-bottom: .4rem;
+    }
 }

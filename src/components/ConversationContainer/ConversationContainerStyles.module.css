@@ -77,10 +77,10 @@
 }
 
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 580px) {
 
     .container {
-        padding: 1.3rem 2rem;
+        padding: 1.3rem .5rem;
     }
 
     .sub_box {
@@ -95,6 +95,10 @@
 
     .sub_box>div{
         padding-bottom: 2rem;
+    }
+
+    .currentStatusBox{
+        padding: 2rem 1rem;
     }
 }
 
