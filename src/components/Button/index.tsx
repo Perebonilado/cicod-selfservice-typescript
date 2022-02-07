@@ -20,6 +20,8 @@ const Button: React.FC<Props> = ({
     isTextField, 
     setIsTextField,
     setTextAreaValue}) => {
+
+       
     
     return (
         <a href="/" type="submit" 

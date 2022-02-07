@@ -4,8 +4,8 @@ import TicketDetails from './screens/TicketDetails';
 import {AppProvider} from './AppContext'
 
 
-
 function App() {
+  
   return (
     <AppProvider>
      <TicketDetails />

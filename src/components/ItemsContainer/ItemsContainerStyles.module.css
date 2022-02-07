@@ -1,0 +1,29 @@
+.headingBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .7rem 0;
+    border-bottom: 1px solid #0000001F;
+    cursor: pointer;
+}
+
+.headingBox h3{
+    color: #76808B;
+}
+
+.container {
+    padding: 0 10rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    .container{
+        padding: 0 5rem;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+
+    .container {
+        padding: 0 .5rem;
+    }
+}

@@ -1,0 +1,29 @@
+.container {
+    overflow-x: auto;
+    padding: 1rem 1.5rem;
+}
+
+table {
+    width: 100%;
+    min-width: 35rem;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+th {
+    border-bottom: 1px solid #0000001F;
+    padding: .7rem 0;
+}
+
+td {
+    padding: .7rem 0;
+}
+
+th:last-child{
+    border-bottom: none;
+    text-align: right;
+}
+
+tr td:last-child{
+    text-align: right;
+}
