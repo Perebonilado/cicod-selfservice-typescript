@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
 .message_box {
-    width: fit-content;
     text-align: justify;
+    width: fit-content;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.message_text {
+    font-family: 'Open Sans', sans-serif;
 }
 
 .container {
@@ -60,6 +69,9 @@
     align-self: flex-end;
     border-left: 4px solid limegreen;
 }
+
+
+
 
 @media only screen and (max-width: 760px) {
     .titleBox{

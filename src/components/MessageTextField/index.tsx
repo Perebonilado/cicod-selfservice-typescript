@@ -18,6 +18,7 @@ const MessageTextField: React.FC<Props> = ({isTextField, setIsTextField}) => {
     const inputRef = useRef<HTMLInputElement>(null)
     const [ fileName, setFileName ] = useState<string>('')
     const [isFileName, setIsFileName] = useState<boolean>(false)
+    const [isAttach, setIsAttach] = useState<boolean>(false)
     const [textAreaValue, setTextAreaValue] = useState<string>('')
     
     
@@ -34,12 +35,14 @@ const MessageTextField: React.FC<Props> = ({isTextField, setIsTextField}) => {
             if(name){
             setFileName(name)
             setIsFileName(!isFileName)
+            setIsAttach(!isAttach)
             }
     }
 
     const handleDelete = (e: React.MouseEvent<HTMLImageElement, MouseEvent>) => {
             setFileName('')
             setIsFileName(!isFileName)
+            setIsAttach(!isAttach)
     }
 
 
@@ -64,11 +67,12 @@ const MessageTextField: React.FC<Props> = ({isTextField, setIsTextField}) => {
         parseInt(seconds) < 10 ? seconds =`0${seconds}` : seconds = `${seconds}`
 
         
-       const newMessage = { id: new Date().getTime(), date: `${day} ${month} ${date}, ${year}`, time: `${hours}:${minutes}:${seconds}`, message: textAreaValue, documentName: fileName, isAttach: isFileName, isReply: false}
+       const newMessage = { id: new Date().getTime(), date: `${day} ${month} ${date}, ${year}`, time: `${hours}:${minutes}:${seconds}`, message: textAreaValue, documentName: fileName, isAttach: isAttach, isReply: false}
        if (Messages && setMessages && textAreaValue) {
            setMessages([...Messages, newMessage])
            setTextAreaValue('')
            setFileName('')
+           setIsAttach(false)
        }
     }
 

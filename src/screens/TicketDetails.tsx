@@ -3,6 +3,8 @@ import Footer from "../components/Footer"
 import IdHeading from "../components/IdHeading"
 import ConversationContainer from "../components/ConversationContainer"
 import TicketDetailsStyles from './TicketDetailsStyles.module.css'
+import OrderDetailsContainer from "../components/OrderDetailsContainer"
+
 
 const TicketDetails: React.FC = () => {
     return (
@@ -11,6 +13,7 @@ const TicketDetails: React.FC = () => {
         <section className={`${TicketDetailsStyles['container']}`}>
         <IdHeading id={1004981}/>
         <ConversationContainer />
+        <OrderDetailsContainer />
         </section>
         <Footer />
         </>
@@ -18,4 +21,8 @@ const TicketDetails: React.FC = () => {
 }
 
 export default TicketDetails
+       
             
+        
+        
+       

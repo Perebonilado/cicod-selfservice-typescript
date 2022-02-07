@@ -29,7 +29,7 @@ const MessageBox:React.FC<Props> = ({
                 <div className={`${MessageBoxStyles['circle']}`}></div>
                 <p>{time}, {date}</p>
             </div>
-            <p>{message}</p>
+            <p className={`${MessageBoxStyles['message_text']}`}>{message}</p>
             {isAttach && 
                 <div className={`${MessageBoxStyles['attachment_box']}`}>
                     <p>Attachments</p>
