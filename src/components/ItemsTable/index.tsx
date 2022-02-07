@@ -1,6 +1,13 @@
 import ItemsTableStyles from './ItemsTableStyles.module.css'
+import { AppContext, AppContent } from '../../AppContext'
+import * as React from 'react'
+
 
 const ItemsTable:React.FC = () => {
+    
+    const {items} = React.useContext(AppContext) as AppContent
+
+
     return (
         <div className={`${ItemsTableStyles['container']}`}>
             <table>
@@ -30,49 +37,35 @@ const ItemsTable:React.FC = () => {
                     </thead>
                 
                 <tbody>
+                
+                {items.map((item)=>{
+                    const { product, merchantLocation, id, qty, amount, unitPrice } = item
 
-                <tr>
+                    return (
+                        <tr key={id}>
                     <td>
-                    Baileys Delight
+                    {product}
                     </td>
 
                     <td>
-                    Ikeja
+                    {merchantLocation}
                     </td>
 
                     <td>
-                    #7500
+                    {qty}
                     </td>
 
                     <td>
-                        #52,500
+                    &#x20A6; {unitPrice}
                     </td>
 
                     <td>
-                        5
+                    &#x20A6; {amount}
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                    Baileys Delight
-                    </td>
+                    )
+                })}
 
-                    <td>
-                    Ikeja
-                    </td>
-
-                    <td>
-                    #7500
-                    </td>
-
-                    <td>
-                        #52,500
-                    </td>
-
-                    <td>
-                        5
-                    </td>
-                </tr>
                 </tbody>
             </table>
         </div>

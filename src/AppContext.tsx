@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { MessageTemplate } from './MessageTemplate'
 import { OrderTemplate } from './OrderTemplate'
 import { StatusHistoryTemplate } from './StatusHistoryTemplate'
+import { ItemsTemplate } from './ItemsTemplate'
 
 export type AppContent = {
     Messages?: MessageTemplate[],
@@ -14,6 +15,8 @@ export type AppContent = {
     setStatusHistoryInfo?: React.Dispatch<React.SetStateAction<StatusHistoryTemplate[]>>,
     isItems: boolean,
     setIsItems: React.Dispatch<React.SetStateAction<boolean>>
+    items: ItemsTemplate[],
+    setItems: React.Dispatch<React.SetStateAction<ItemsTemplate[]>>
 }
 
 export const AppContext = React.createContext<AppContent | null>(null)
@@ -80,14 +83,36 @@ export const AppProvider: React.FC = ({children}) => {
         },
     ]
 
+    const itemsData:ItemsTemplate[] = [
+        {
+        id: 1,
+        qty: 7,
+        product: 'Baileys Delight',
+        merchantLocation: 'Ikeja',
+        unitPrice: 7500,
+        amount: 52500.00
+        },
+        
+        {
+        id: 2,
+        product: 'Baileys Delight',
+        merchantLocation: 'Ikeja',
+        qty: 7,
+        unitPrice: 7500,
+        amount: 52500.00
+        },
+
+]
+
     const [Messages, setMessages] = useState<MessageTemplate[]>(messages)
     const [orderDetails, setOrderDetails] = useState<OrderTemplate>(order)
     const [isOrderDetails, setIsOrderDetails] = useState<boolean>(true)
     const [statusHistoryInfo, setStatusHistoryInfo] = useState<StatusHistoryTemplate[]>(StatusHistory)
     const [isItems, setIsItems] = useState<boolean>(true)
+    const [items, setItems] = useState<ItemsTemplate[]>(itemsData)
 
     return (
-        <AppContext.Provider value={{Messages, setMessages, orderDetails, setOrderDetails, isOrderDetails, setIsOrderDetails, statusHistoryInfo, isItems, setIsItems}}>
+        <AppContext.Provider value={{Messages, setMessages, orderDetails, setOrderDetails, isOrderDetails, setIsOrderDetails, statusHistoryInfo, isItems, setIsItems, items, setItems}}>
             {children}
         </AppContext.Provider>
     )
