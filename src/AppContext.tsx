@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { MessageTemplate } from './MessageTemplate'
 import { OrderTemplate } from './OrderTemplate'
+import { StatusHistoryTemplate } from './StatusHistoryTemplate'
 
 export type AppContent = {
     Messages?: MessageTemplate[],
@@ -8,7 +9,9 @@ export type AppContent = {
     orderDetails: OrderTemplate,
     setOrderDetails: React.Dispatch<React.SetStateAction<OrderTemplate>>,
     isOrderDetails: boolean,
-    setIsOrderDetails: React.Dispatch<React.SetStateAction<boolean>>
+    setIsOrderDetails: React.Dispatch<React.SetStateAction<boolean>>,
+    statusHistoryInfo: StatusHistoryTemplate[],
+    setStatusHistoryInfo?: React.Dispatch<React.SetStateAction<StatusHistoryTemplate[]>>
 }
 
 export const AppContext = React.createContext<AppContent | null>(null)
@@ -52,13 +55,38 @@ export const AppProvider: React.FC = ({children}) => {
         deliveryAddress: 'Same as custimer address'
     }
 
+    const StatusHistory:StatusHistoryTemplate[] = [
+        {
+            id: 1,
+            status: 'PAID',
+            dateAndTime: '20-12-18;3:00',
+            comment: 'Lorem ipsum facere aut suns'
+        },
+
+        {
+            id: 2,
+            status: 'PAID',
+            dateAndTime: '20-12-18;3:00',
+            comment: 'Lorem ipsum facere aut suns'
+        },
+
+        {
+            id: 3,
+            status: 'PAID',
+            dateAndTime: '20-12-18;3:00',
+            comment: 'Lorem ipsum facere aut suns'
+        },
+    ]
+
     const [Messages, setMessages] = useState<MessageTemplate[]>(messages)
     const [orderDetails, setOrderDetails] = useState<OrderTemplate>(order)
     const [isOrderDetails, setIsOrderDetails] = useState<boolean>(true)
+    const [statusHistoryInfo, setStatusHistoryInfo] = useState<StatusHistoryTemplate[]>(StatusHistory)
+
 
 
     return (
-        <AppContext.Provider value={{Messages, setMessages, orderDetails, setOrderDetails, isOrderDetails, setIsOrderDetails}}>
+        <AppContext.Provider value={{Messages, setMessages, orderDetails, setOrderDetails, isOrderDetails, setIsOrderDetails, statusHistoryInfo}}>
             {children}
         </AppContext.Provider>
     )

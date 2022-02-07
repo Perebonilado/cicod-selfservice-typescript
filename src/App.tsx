@@ -5,11 +5,10 @@ import {AppProvider} from './AppContext'
 
 
 
-
 function App() {
   return (
     <AppProvider>
-      <TicketDetails />
+     <TicketDetails />
     </AppProvider>
   );
 }
