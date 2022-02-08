@@ -1,7 +1,5 @@
 import MessagesContainerStyles from './MessagesContainerStyles.module.css'
 import MessageBox from '../MessageBox'
-import useFetch from '../../useFetch'
-import {MessageTemplate} from '../../MessageTemplate'
 import { AppContext, AppContent } from '../../AppContext'
 import * as React from 'react'
 

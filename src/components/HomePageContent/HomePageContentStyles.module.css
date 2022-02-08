@@ -8,6 +8,15 @@
     background-color: #F8F5FC;
 }
 
+.input_button_container {
+    display: flex;
+    align-items: center;
+}
+
+.input_container {
+    margin-right: 1rem;
+}
+
 .main-text{
     font-size: 33px;
     text-align: justify;
@@ -30,6 +39,15 @@
         font-size: 26px;
         line-height: 35px;
         text-align: center;
+    }
+
+    .input_button_container{
+        flex-direction: column;
+    }
+
+    .input_container {
+        margin-right: 0;
+        margin-bottom: 1.2rem;
     }
 
     .sub-text {

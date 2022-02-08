@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import {MessageTemplate} from './MessageTemplate'
+import {MessageTemplate} from './Templates'
 
 const useFetch = () => {
     

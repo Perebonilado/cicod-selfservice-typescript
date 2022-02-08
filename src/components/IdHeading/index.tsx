@@ -25,8 +25,18 @@ const IdHeading: React.FC<Props> = ({id}) => {
 
             <form action="" onSubmit={handleSubmit}>
             <label>Ticket/order ID</label>
+
+            <div className={`${IdHeadingStyles['input_button_container']}`}>
+            <div className={`${IdHeadingStyles['input_container']}`}>
             <InputField inputVal={inputVal} setInputVal={setInputVal} />
+            </div>
+
+           
             <Button />
+            </div>
+           
+
+
             </form>
             
         </section>
@@ -34,3 +44,5 @@ const IdHeading: React.FC<Props> = ({id}) => {
 }
 
 export default IdHeading
+
+

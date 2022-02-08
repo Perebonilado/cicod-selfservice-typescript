@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
-import { MessageTemplate } from './MessageTemplate'
-import { OrderTemplate } from './OrderTemplate'
-import { StatusHistoryTemplate } from './StatusHistoryTemplate'
-import { ItemsTemplate } from './ItemsTemplate'
+import { OrderTemplate, StatusHistoryTemplate, ItemsTemplate, MessageTemplate} from './Templates'
 
 export type AppContent = {
     Messages?: MessageTemplate[],
@@ -65,21 +62,24 @@ export const AppProvider: React.FC = ({children}) => {
             id: 1,
             status: 'PAID',
             dateAndTime: '20-12-18;3:00',
-            comment: 'Lorem ipsum facere aut suns'
+            comment: 'Lorem ipsum facere aut suns',
+            isComment: false
         },
 
         {
             id: 2,
             status: 'PAID',
             dateAndTime: '20-12-18;3:00',
-            comment: 'Lorem ipsum facere aut suns'
+            comment: 'Lorem ipsum facere aut suns',
+            isComment: false
         },
 
         {
             id: 3,
             status: 'PAID',
             dateAndTime: '20-12-18;3:00',
-            comment: 'Lorem ipsum facere aut suns'
+            comment: 'Lorem ipsum facere aut suns',
+            isComment: false
         },
     ]
 
@@ -112,7 +112,7 @@ export const AppProvider: React.FC = ({children}) => {
     const [items, setItems] = useState<ItemsTemplate[]>(itemsData)
 
     return (
-        <AppContext.Provider value={{Messages, setMessages, orderDetails, setOrderDetails, isOrderDetails, setIsOrderDetails, statusHistoryInfo, isItems, setIsItems, items, setItems}}>
+        <AppContext.Provider value={{Messages, setMessages, orderDetails, setOrderDetails, isOrderDetails, setIsOrderDetails, statusHistoryInfo, setStatusHistoryInfo,isItems, setIsItems, items, setItems}}>
             {children}
         </AppContext.Provider>
     )

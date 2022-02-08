@@ -55,6 +55,15 @@
     grid-column-end: 3;
 }
 
+.item3>div {
+    display: flex;
+    width: fit-content;
+}
+
+.item3 h4 {
+    padding-right: 3rem;
+}
+
 @media only screen and (max-width: 280px) {
     .container li > div {
         grid-template-columns: auto;
@@ -73,5 +82,13 @@
     .item3{
         grid-column-start: 1;
         grid-column-end: 3;
+    }
+
+    .container li {
+        padding: 0 0 2rem 1.5rem;
+    }
+
+    .container li > div {
+        padding: 1rem .8rem;
     }
 }

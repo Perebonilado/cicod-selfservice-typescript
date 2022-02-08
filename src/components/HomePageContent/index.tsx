@@ -20,8 +20,16 @@ const HomePageContent:React.FC = () => {
             <p className={`${HomePageContentStyles['sub-text']}`}>Check the status of your ticket or your order and engage</p>
             
             <form className={`${HomePageContentStyles['form']}`} action="" onSubmit={(e)=>handleSubmit(e)}>
+
+                <div className={`${HomePageContentStyles['input_button_container']}`}>
+
+                <div className={`${HomePageContentStyles['input_container']}`}>
                <InputField inputVal={inputVal} setInputVal={setInputVal} /> 
+                </div>
+
                <Button buttonType='solid'/>
+                </div>
+
             </form>
 
         </section>
@@ -29,3 +37,4 @@ const HomePageContent:React.FC = () => {
 }
 
 export default HomePageContent
+
