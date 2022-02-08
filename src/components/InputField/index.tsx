@@ -13,7 +13,7 @@ const InputField: React.FC<Props> = ({ inputVal, setInputVal }:Props) => {
     return (
     <input
         className={`${inputFieldStyles['inputBox']}`}
-        type="text" 
+        type="number" 
         id="ticket-id" 
         placeholder="Enter ticker ID or Order ID" 
         value={inputVal} 

@@ -7,13 +7,15 @@ import OrderDetailsContainer from "../components/OrderDetailsContainer"
 import StatusHistoryContainer from '../components/StatusHistoryContainer'
 import ItemsContainer from "../components/ItemsContainer"
 
-
 const TicketDetails: React.FC = () => {
+    
+    const query = parseInt(window.location.search.slice(4, window.location.search.length + 1))
+
     return (
         <>
         <NavBar businessName="Business Name" />
         <section className={`${TicketDetailsStyles['container']}`}>
-        <IdHeading id={1004981}/>
+        <IdHeading id={query}/>
         <ConversationContainer />
         <OrderDetailsContainer />
         <ItemsContainer />

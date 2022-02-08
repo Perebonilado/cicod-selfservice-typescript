@@ -1,15 +1,33 @@
 import HomePageContentStyles from './HomePageContentStyles.module.css'
 import InputField from '../InputField'
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import Button from '../Button'
+import { useSearchParams } from 'react-router-dom'
+import { AppContext, AppContent } from '../../AppContext'
+import * as React from 'react'
+
 
 
 const HomePageContent:React.FC = () => {
 
-    const [inputVal, setInputVal] = useState <string>('')
+    
+    const {inputVal, setInputVal} = React.useContext(AppContext) as AppContent
+    const [searchParams, setSearchParams] = useSearchParams()
+    
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
-        console.log(inputVal)
+        if (inputVal) {
+            setSearchParams({id: inputVal})
+        }
+        setInputVal('')
+            
+    }
+
+    const handleTrack = () => {
+        if (inputVal) {
+            setSearchParams({id: inputVal})
+        }
         setInputVal('')
     }
     
@@ -27,7 +45,7 @@ const HomePageContent:React.FC = () => {
                <InputField inputVal={inputVal} setInputVal={setInputVal} /> 
                 </div>
 
-               <Button buttonType='solid'/>
+               <Button buttonType='solid' handleTrack={handleTrack} />
                 </div>
 
             </form>

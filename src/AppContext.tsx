@@ -13,7 +13,9 @@ export type AppContent = {
     isItems: boolean,
     setIsItems: React.Dispatch<React.SetStateAction<boolean>>
     items: ItemsTemplate[],
-    setItems: React.Dispatch<React.SetStateAction<ItemsTemplate[]>>
+    setItems: React.Dispatch<React.SetStateAction<ItemsTemplate[]>>,
+    inputVal: string,
+    setInputVal: React.Dispatch<React.SetStateAction<string>>
 }
 
 export const AppContext = React.createContext<AppContent | null>(null)
@@ -110,9 +112,10 @@ export const AppProvider: React.FC = ({children}) => {
     const [statusHistoryInfo, setStatusHistoryInfo] = useState<StatusHistoryTemplate[]>(StatusHistory)
     const [isItems, setIsItems] = useState<boolean>(true)
     const [items, setItems] = useState<ItemsTemplate[]>(itemsData)
+    const [inputVal, setInputVal] = useState <string>('')
 
     return (
-        <AppContext.Provider value={{Messages, setMessages, orderDetails, setOrderDetails, isOrderDetails, setIsOrderDetails, statusHistoryInfo, setStatusHistoryInfo,isItems, setIsItems, items, setItems}}>
+        <AppContext.Provider value={{inputVal, setInputVal,Messages, setMessages, orderDetails, setOrderDetails, isOrderDetails, setIsOrderDetails, statusHistoryInfo, setStatusHistoryInfo,isItems, setIsItems, items, setItems}}>
             {children}
         </AppContext.Provider>
     )

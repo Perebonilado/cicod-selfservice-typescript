@@ -1,7 +1,10 @@
 import IdHeadingStyles from './IdHeadingStyles.module.css'
 import InputField from '../InputField'
 import Button from '../Button'
-import { FormEvent, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
+import { AppContext, AppContent } from '../../AppContext'
+import * as React from 'react'
+
 
 interface Props {
     id: number
@@ -9,13 +12,24 @@ interface Props {
 
 const IdHeading: React.FC<Props> = ({id}) => {
 
-    const [inputVal, setInputVal] = useState<string>('')
+    const {inputVal, setInputVal} = React.useContext(AppContext) as AppContent
+    const [searchParams, setSearchParams] = useSearchParams()
     
-    const handleSubmit = (e: FormEvent) => {
+    const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
-        console.log(inputVal)
+        if (inputVal) {
+            setSearchParams({id: inputVal})
+        }
         setInputVal('')
     }
+
+    const handleTrack = () => {
+        if (inputVal) {
+            setSearchParams({id: inputVal})
+        }
+        setInputVal('')
+    }
+    
 
     return (
         <section className={`${IdHeadingStyles['container']}`}>
@@ -32,7 +46,7 @@ const IdHeading: React.FC<Props> = ({id}) => {
             </div>
 
            
-            <Button />
+            <Button handleTrack={handleTrack}/>
             </div>
            
 

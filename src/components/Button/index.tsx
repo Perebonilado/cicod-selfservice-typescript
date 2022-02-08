@@ -9,7 +9,8 @@ type Props = {
     setIsTextField?: React.Dispatch<React.SetStateAction<boolean>>,
     textAreaValue?: string,
     setTextAreaValue?: React.Dispatch<React.SetStateAction<string>> | undefined, 
-    handleSendMessage?: ()=>void
+    handleSendMessage?: ()=>void,
+    handleTrack?: ()=>void
 }
 
 
@@ -19,7 +20,8 @@ const Button: React.FC<Props> = ({
     children, 
     isTextField, 
     setIsTextField,
-    setTextAreaValue}) => {
+    setTextAreaValue,
+    handleTrack}) => {
 
        
     
@@ -39,6 +41,10 @@ const Button: React.FC<Props> = ({
 
             if(handleSendMessage && setTextAreaValue){
                return handleSendMessage()
+            }
+
+            if (handleTrack) {
+                return handleTrack()
             }
 
         }}
