@@ -53,10 +53,12 @@ const ConversationContainer:React.FC = () => {
                 </div>
 
 
-            {!isTextField && <div className={`${ConversationContainerStyles['reply_box']}`}><img src="" alt="" /><Button buttonType='link' setIsTextField={setIsTextField} isTextField={isTextField}>Reply</Button></div>}
 
             <MessagesContainer />
             {isTextField && <MessageTextField isTextField={isTextField} setIsTextField={setIsTextField} />}
+            {!isTextField && <div className={`${ConversationContainerStyles['reply_box']}`}><img src="https://res.cloudinary.com/dt0wfaxft/image/upload/v1642073612/Group_7841_acikuh.svg" alt="reply_icon" /><Button buttonType='link' setIsTextField={setIsTextField} isTextField={isTextField}>
+                Reply
+            </Button></div>}
             </div>
 
 

@@ -2,9 +2,9 @@ import ButtonStyles from './ButtonStyles.module.css'
 import * as React from 'react'
 
 
-interface Props {
+type Props = {
     buttonType?: string,
-    children?: string,
+    children?: string,  
     isTextField?: boolean,
     setIsTextField?: React.Dispatch<React.SetStateAction<boolean>>,
     textAreaValue?: string,
