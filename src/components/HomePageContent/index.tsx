@@ -1,6 +1,5 @@
 import HomePageContentStyles from './HomePageContentStyles.module.css'
 import InputField from '../InputField'
-import  { useState } from 'react'
 import Button from '../Button'
 import { useSearchParams } from 'react-router-dom'
 import { AppContext, AppContent } from '../../AppContext'

@@ -19,6 +19,7 @@ const InputField: React.FC<Props> = ({ inputVal, setInputVal }:Props) => {
         value={inputVal} 
         onChange={(e)=>setInputVal(e.target.value)}
         name='ticket-id'
+        required
         /> 
         )
 }
